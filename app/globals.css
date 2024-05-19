@@ -1,33 +1,26 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "~bootstrap/dist/css/bootstrap.min.css";
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.box-color {
+    background-color: gray;
+    border: 1px solid black;
+    padding: 1px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.box-color-red {
+    background-color: indianred;
+    /*border: 1px solid black;*/
+    /*padding: 1px;*/
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+@media (min-width: 768px) {
+    .height-100 {
+        height: 100vh; /* Desktop */
+    }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@media (max-width: 767px) {
+    .height-100 {
+        height: 100%; /* Mobile */
+    }
 }
