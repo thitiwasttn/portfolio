@@ -6,6 +6,7 @@ import thailandFlag from '@/public/image/thailand.png'
 import emailIcon from '@/public/image/email.png'
 import telephoneIcon from '@/public/image/telephone.png'
 import SocialMediaButtons from "@/component/home_component/SocialMediaButtons";
+import DownloadCvComponent from "@/component/home_component/DownloadCvComponent";
 
 interface ProfileInfoM {
     name: string,
@@ -21,11 +22,12 @@ export default function ProfileInfoComponent() {
     }
     return (
         <>
-            <div className={"profileInfo shadow bg-body-tertiary rounded"}>
+            <div className={"profileInfo shadow bg-body-tertiary rounded-4"}>
                 <div className={"container h-100 d-inline-block position-relative"}>
                     <div className={"row mt-5"}>
                         <div className={"col-12 text-center"}>
-                            <img src={avatar.src} className="rounded mx-auto d-block img-thumbnail img-fluid" alt="..."/>
+                            <img src={avatar.src} className="rounded mx-auto d-block img-thumbnail img-fluid"
+                                 alt="..."/>
                         </div>
                         <div className={"col-12 mt-3"}>
                             <span className="fs-3 d-flex justify-content-center">{profileM.name}</span>
@@ -34,10 +36,10 @@ export default function ProfileInfoComponent() {
                             <span
                                 className="fs-5 d-flex justify-content-center fst-italic text-body-secondary">{profileM.rolePosition}</span>
                         </div>
-                        <div className={"col-12"}>
+                        {/*<div className={"col-12"}>
                             <hr/>
-                        </div>
-                        <div className={"col-12 mt-2"}>
+                        </div>*/}
+                        <div className={"col-12 mt-4"}>
                             <div className={"d-flex align-items-center"}>
                                 <div>
                                     <span className={"ms-3 me-2"}>
@@ -68,11 +70,19 @@ export default function ProfileInfoComponent() {
                             </div>
                         </div>
 
+                        <div className={"col-12 mt-4"}>
+                            <div className={"d-flex justify-content-center"}>
+                                <DownloadCvComponent/>
+                            </div>
+                        </div>
+
                         <div className={"col-12 mt-2 d-block d-md-none mb-3 "}>
                             <div className={"align-items-center "}>
                                 <SocialMediaButtons/>
                             </div>
                         </div>
+
+
                     </div>
 
                     {/*<div className={"bottom-social"}>
