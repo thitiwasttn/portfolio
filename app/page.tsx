@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ProfileInfoComponent from "@/component/home_component/ProfileInfoComponent";
 import ContentComponent from "@/component/home_component/ContentComponent";
+import "bootstrap/dist/css/bootstrap.min.css"; // Import bootstrap CSS
 
 export default function Home() {
     return (
