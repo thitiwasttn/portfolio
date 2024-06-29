@@ -43,10 +43,22 @@ export function getExperience(): Experience[] {
             date: "APRIL 2023 - PRESENT",
             name: "Java Developer, Software Developer | Degile (On site AIS)",
             link: 'https://digile.com/',
-            responsibilities: ["-"
+            responsibilities: [
+                "Receive requirements form user and convert to programing task",
+                "Estimate task to develop time",
+                "Design Database structure",
+                "Develop software (Backend, Frontend, Server Task)",
+                "Deploy software to Development Server & Staging Server",
+                "Diagnosis & fix if any defects or issues from Production",
+                "Support staff & team",
+                "Communicate between user & development team",
+                "Support deployment software to production"
             ],
             image: [digile.src, ais.src],
-            project: ["-"]
+            project: [
+                "Internal 6 Software for engineers",
+                "SMS Software for AIS activities"
+            ]
         }
     ]
 }
@@ -86,7 +98,10 @@ export function getSkillService(): SkillM[] {
                 {
                     title: "HTML, CSS",
                     detail: "-",
-                    framework: ["Bootstrap CSS framework"]
+                    framework: [
+                        "Bootstrap CSS framework",
+                        "Prime NG"
+                    ]
                 },
                 {
                     title: "Python",
