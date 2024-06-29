@@ -34,6 +34,15 @@ export default function ContentComponent() {
                         <SkillComponent/>
                     </div>
                 </div>
+
+                <div className={"row mt-5"}>
+                    <div className={"col-12"}>
+                        <p className="h4">EXPERIENCE</p>
+                    </div>
+                    <div className={"col-12"}>
+                        -
+                    </div>
+                </div>
             </div>
         </div>
     </>

@@ -4,12 +4,13 @@ import Accordion from 'react-bootstrap/Accordion';
 interface SkillM {
     display: string;
     value: string;
-    details?: Detail[]
+    details: Detail[]
 }
 
 interface Detail {
     title: string
     detail: string
+    framework: string[]
 }
 
 export default function SkillComponent() {
@@ -20,31 +21,46 @@ export default function SkillComponent() {
             details: [
                 {
                     title: "Expert Java",
-                    detail: "Spring, Spring boot"
+                    detail: "-",
+                    framework: [
+                        "Spring",
+                        "Spring boot"
+                    ]
                 },
                 {
                     title: "Expert SQL",
-                    detail: "-"
+                    detail: "-",
+                    framework: ["-"]
                 },
                 {
                     title: "Expert JavaScript, TypeScript",
-                    detail: "React, Next.js, Angular, Jquery"
-                },
-                {
-                    title: "Python",
-                    detail: "-"
+                    detail: "-",
+                    framework: [
+                        "React",
+                        "Next.js",
+                        "Angular",
+                        "Jquery"
+                    ]
                 },
                 {
                     title: "HTML, CSS",
-                    detail: "Bootstrap CSS framework"
+                    detail: "-",
+                    framework: ["Bootstrap CSS framework"]
                 },
                 {
-                    title: "Basic Predictive Machine Learning",
-                    detail: "-"
+                    title: "Python",
+                    detail: "-",
+                    framework: ["-"]
+                },
+                {
+                    title: "Machine Learning",
+                    detail: "Basic Predictive Machine Learning",
+                    framework: ["-"]
                 },
                 {
                     title: "PHP",
-                    detail: "-"
+                    detail: "-",
+                    framework: ["-"]
                 }
             ]
         }, {
@@ -53,28 +69,120 @@ export default function SkillComponent() {
             details: [
                 {
                     title: "MySQL",
-                    detail: "-"
+                    detail: "",
+                    framework: ["-"]
                 },
                 {
                     title: "PostgresSQL",
-                    detail: "-"
+                    detail: "",
+                    framework: ["-"]
                 },
                 {
                     title: "Oracle",
-                    detail: "-"
+                    detail: "",
+                    framework: ["-"]
                 },
             ]
         }, {
-            display: "OS", value: "os",
+            display: "OS",
+            value: "os",
+            details: [
+                {
+                    title: "Windows Server",
+                    detail: "",
+                    framework: ["-"]
+                },
+                {
+                    title: "Linux Server",
+                    detail: "",
+                    framework: ["Ubuntu"]
+                }
+            ]
         }, {
-            display: "Tools", value: "tool",
+            display: "Tools",
+            value: "tool",
+            details: [
+                {
+                    title: "Docker",
+                    detail: "",
+                    framework: ["Docker Compose"]
+                },
+                {
+                    title: "K8s",
+                    detail: "",
+                    framework: ["-"]
+                },
+                {
+                    title: "GCP",
+                    detail: "",
+                    framework: ["-"]
+                },
+                {
+                    title: "Web Server",
+                    detail: "",
+                    framework: ["Nginx", "Apache"]
+                },
+                {
+                    title: "CMS",
+                    detail: "",
+                    framework: ["Strapi"]
+                },
+                {
+                    title: "Source Control",
+                    detail: "",
+                    framework: ["-"]
+                },
+                {
+                    title: "Jetbrain",
+                    detail: "",
+                    framework: ["-"]
+                },
+                {
+                    title: "VMware sphere",
+                    detail: "",
+                    framework: ["-"]
+                },
+                {
+                    title: "ELK Stack",
+                    detail: "",
+                    framework: ["-"]
+                },
+                {
+                    title: "AWS",
+                    detail: "",
+                    framework: ["ECS", "EC2"]
+                }
+            ]
+        }, {
+            details: [
+                {
+                    detail: "",
+                    framework: ["-"],
+                    title: "Windows command and Linux command"
+                },
+                {
+                    detail: "",
+                    framework: ["-"],
+                    title: "Knowledge in network architecture and server infrastructure"
+                },
+                {
+                    detail: "",
+                    framework: ["-"],
+                    title: "Video Streaming Server"
+                },
+                {
+                    detail: "",
+                    framework: ["-"],
+                    title: "VPN server"
+                }
+            ], display: "Other", value: "Other"
         }
     ]
 
     return (
         <>
 
-            <Accordion defaultActiveKey={!!skills ? skills.at(0)?.value : ''}>
+            <Accordion defaultActiveKey={!!skills ? skills.at(0)?.value : ''} alwaysOpen>
                 {skills.map((value) => {
                     return (
                         <Accordion.Item key={value.value} eventKey={value.value}>
@@ -84,10 +192,18 @@ export default function SkillComponent() {
                                     {value.details?.map(value1 => {
                                         return <div key={value1.title} className={"col-sm-auto col-md-4 col-xl-4 mt-2"}>
                                             <div className="card h-100">
-                                                <div className="card-body">
-                                                    <h6 className="card-title">{value1.title}</h6>
-                                                    <p className="card-text">{value1.detail}</p>
+                                                <div className="card-header">
+                                                    <strong>{value1.title}</strong>
                                                 </div>
+                                                {/*<div className="card-body">
+                                                    <p className="card-text">{value1.detail}</p>
+                                                </div>*/}
+                                                <ul className="list-group list-group-flush">
+                                                    {value1.framework.map(value2 => {
+                                                        return <li key={value2}
+                                                                   className="list-group-item">{value2}</li>
+                                                    })}
+                                                </ul>
                                             </div>
                                         </div>
                                     })}
