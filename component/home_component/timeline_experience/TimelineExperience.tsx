@@ -14,6 +14,7 @@ import digile from "@/public/image/digile.png";
 interface Experience {
     date: string,
     name: string,
+    link: string
     responsibilities: string[]
     image: string []
     project: string []
@@ -24,6 +25,7 @@ export default function TimelineExperience() {
         {
             date: "1 APRIL 2020 - APRIL 2023",
             name: "Application Developer | G-ABLE",
+            link: 'https://www.g-able.com/',
             responsibilities: [
                 "Implement server and setting network architecture",
                 "Deploy Application and install necessary tools",
@@ -44,6 +46,7 @@ export default function TimelineExperience() {
         {
             date: "APRIL 2023 - PRESENT",
             name: "Java Developer, Software Developer | Degile (On site AIS)",
+            link: 'https://digile.com/',
             responsibilities: ["-"
             ],
             image: [digile.src, ais.src],
@@ -82,7 +85,12 @@ export default function TimelineExperience() {
                                         })}
                                     </div>
                                     <div className={"col-12 mt-2"}>
-                                        <span className={"text-black fw-bold"}>{value.name}</span>
+                                        <span className={"text-black fw-bold"}>
+                                            <a href={value.link}
+                                               target="_blank"
+                                               className="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                                            {value.name}
+                                        </a></span>
                                     </div>
                                     <div className={"col-12 mt-2"}>
                                         <div className="card" style={{}}>
