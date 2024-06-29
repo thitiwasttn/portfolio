@@ -44,7 +44,7 @@ export function getExperience(): Experience[] {
             name: "Java Developer, Software Developer | Degile (On site AIS)",
             link: 'https://digile.com/',
             responsibilities: [
-                "Receive requirements form user and convert to programing task",
+                "Receive requirements form user and convert to development task",
                 "Estimate task to develop time",
                 "Design Database structure",
                 "Develop software (Backend, Frontend, Server Task)",
@@ -259,7 +259,8 @@ export function getSkillService(): SkillM[] {
                         "HTTP",
                         "REST Service",
                         "Web socket",
-                        "Remote EJB"
+                        "Remote EJB",
+                        "Video Steaming HLS"
                     ],
                     title: "Protocol"
                 }

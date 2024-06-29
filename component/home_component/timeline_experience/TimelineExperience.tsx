@@ -29,7 +29,8 @@ export default function TimelineExperience() {
                                 {/*<span className={"text-secondary"}>{value.date}</span>*/}
                             </TimelineOppositeContent>
                             <TimelineSeparator>
-                                <TimelineDot/>
+                                <TimelineDot>
+                                </TimelineDot>
                                 <TimelineConnector/>
                             </TimelineSeparator>
                             <TimelineContent>

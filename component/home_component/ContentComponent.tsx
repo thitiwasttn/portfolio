@@ -52,7 +52,7 @@ export default function ContentComponent() {
                         <p className="h4">EDUCATION</p>
                     </div>
                     <div className={"col-12"}>
-                        <div className="card border-opacity-100 border-white rounded-4">
+                        <div className="card rounded-4" style={{borderColor: "rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important"}}>
                             <div className="card-header">
                                 {"Bachelor's degree"} GPA : 3.26
                             </div>
@@ -69,7 +69,8 @@ export default function ContentComponent() {
                         <p className="h4">CONFERENCES & COURSES</p>
                     </div>
                     <div className={"col-12"}>
-                        <div className="card border-opacity-100 border-white rounded-4">
+                        <div className="card rounded-4"
+                             style={{borderColor: "rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important"}}>
                             <div className="card-header">
                                 Internal training
                             </div>
