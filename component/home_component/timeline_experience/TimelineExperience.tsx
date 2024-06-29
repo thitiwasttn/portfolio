@@ -7,52 +7,12 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import {TimelineOppositeContent, timelineOppositeContentClasses} from "@mui/lab";
 import React from "react";
-import gable from "@/public/image/gable.png";
-import ais from "@/public/image/ais.png";
-import digile from "@/public/image/digile.png";
+import {Experience} from "@/app/modal/ExperienceM";
+import {getExperience} from "@/component/home_component/ProfileService";
 
-interface Experience {
-    date: string,
-    name: string,
-    link: string
-    responsibilities: string[]
-    image: string []
-    project: string []
-}
 
 export default function TimelineExperience() {
-    const experience: Experience[] = [
-        {
-            date: "1 APRIL 2020 - APRIL 2023",
-            name: "Application Developer | G-ABLE",
-            link: 'https://www.g-able.com/',
-            responsibilities: [
-                "Implement server and setting network architecture",
-                "Deploy Application and install necessary tools",
-                "Database design and implement",
-                "Develop Backend restful API",
-                "Develop Web Frontend, Web Admin",
-                "Unit test",
-                "Maintain the system to smoothly continue",
-                "Learning new technology",
-            ],
-            image: [gable.src], project: [
-                "Develop Backend, Design Database and Web admin for Coffee Mobile Ordering Application (แอปพลิเคชั่น สั่งกาแฟ)",
-                "Develop Backend, Design Database and Web admin for University Application (แอปพลิเคชั่นสำหรับนักศึกษามหาวิทยาลัย)",
-                "Maintain Company SMS backend (ดูแลรักษา SMS ของบริษัท)",
-                'งาน presale ศึกษาความเป็นไปได้ด้านเทคโนโลยีของโปรเจคที่ลูกค้าสนใจ'
-            ]
-        },
-        {
-            date: "APRIL 2023 - PRESENT",
-            name: "Java Developer, Software Developer | Degile (On site AIS)",
-            link: 'https://digile.com/',
-            responsibilities: ["-"
-            ],
-            image: [digile.src, ais.src],
-            project: ["-"]
-        }
-    ]
+    const experience: Experience[] = getExperience();
     return <>
         <Timeline
             sx={{
@@ -93,7 +53,7 @@ export default function TimelineExperience() {
                                         </a></span>
                                     </div>
                                     <div className={"col-12 mt-2"}>
-                                        <div className="card" style={{}}>
+                                        <div className="card border-light" style={{}}>
                                             <div className="card-header bg-secondary-subtle">
                                                 <strong>Responsibilities</strong>
                                             </div>
@@ -107,7 +67,7 @@ export default function TimelineExperience() {
                                             <div className="card-header bg-secondary-subtle">
                                                 <strong>Projects</strong>
                                             </div>
-                                            <ul className="list-group list-group-flush ">
+                                            <ul className="list-group list-group-flush list-group-numbered">
                                                 {value.project.map(value1 => {
                                                     return <li key={value1}
                                                                className="list-group-item text-black">{value1}

@@ -7,19 +7,13 @@ import emailIcon from '@/public/image/email.png'
 import telephoneIcon from '@/public/image/telephone.png'
 import SocialMediaButtons from "@/component/home_component/SocialMediaButtons";
 import DownloadCvComponent from "@/component/home_component/DownloadCvComponent";
+import {ProfileInfoM} from "@/app/modal/ProfileM";
+import {getProfile} from "@/component/home_component/ProfileService";
 
-interface ProfileInfoM {
-    name: string,
-    rolePosition: string,
-    email: string,
-    telno: string
-}
 
 export default function ProfileInfoComponent() {
 
-    const profileM: ProfileInfoM = {
-        email: "twopee26@gmail.com", name: "Thitiwas Nupan", rolePosition: "Software Developer", telno: "094-251-8661"
-    }
+    const profileM: ProfileInfoM = getProfile();
     return (
         <>
             <div className={"profileInfo shadow bg-body-tertiary rounded-4"}>
