@@ -24,7 +24,8 @@ export default function SkillComponent() {
                     detail: "-",
                     framework: [
                         "Spring",
-                        "Spring boot"
+                        "Spring boot",
+                        "Java EE"
                     ]
                 },
                 {
@@ -98,7 +99,9 @@ export default function SkillComponent() {
                     framework: ["Ubuntu"]
                 }
             ]
-        }, {
+        },
+
+        {
             display: "Tools",
             value: "tool",
             details: [
@@ -153,6 +156,27 @@ export default function SkillComponent() {
                     framework: ["ECS", "EC2"]
                 }
             ]
+        },
+        {
+            details: [
+                {
+                    detail: "",
+                    framework: [
+                        "Very good communication",
+                        "Can explain well",
+                        "Easy to understand",
+                        "Fast learning"
+                    ],
+                    title: "Communication"
+                }, {
+                    detail: "",
+                    framework: [
+                        "Task splitting",
+                        "Estimate time task"
+                    ],
+                    title: "Management Skill"
+                }
+            ], display: "Soft Skill", value: "Soft Skill"
         }, {
             details: [
                 {
@@ -182,7 +206,7 @@ export default function SkillComponent() {
     return (
         <>
 
-            <Accordion defaultActiveKey={!!skills ? skills.at(0)?.value : ''} alwaysOpen>
+            <Accordion alwaysOpen>
                 {skills.map((value) => {
                     return (
                         <Accordion.Item key={value.value} eventKey={value.value}>

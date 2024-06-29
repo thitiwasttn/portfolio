@@ -1,5 +1,5 @@
 import './ProfileInfoComponent.css'
-import avatar from '@/public/image/avatar.jpg'
+import avatar from '@/public/image/me.jpg'
 import home from '@/public/image/home.png'
 import HomeIcon from "@/component/home_component/HomeIcon";
 import thailandFlag from '@/public/image/thailand.png'
@@ -26,7 +26,7 @@ export default function ProfileInfoComponent() {
                 <div className={"container h-100 d-inline-block position-relative"}>
                     <div className={"row mt-5"}>
                         <div className={"col-12 text-center"}>
-                            <img src={avatar.src} className="rounded mx-auto d-block img-thumbnail img-fluid"
+                            <img src={avatar.src} className="rounded-4 mx-auto d-block img-thumbnail img-fluid"
                                  alt="..."/>
                         </div>
                         <div className={"col-12 mt-3"}>

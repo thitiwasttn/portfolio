@@ -1,4 +1,5 @@
 import SkillComponent from "@/component/home_component/skill/SkillComponent";
+import TimelineExperience from "@/component/home_component/timeline_experience/TimelineExperience";
 
 export default function ContentComponent() {
     const listAreaOfExp: string[] = [
@@ -40,7 +41,7 @@ export default function ContentComponent() {
                         <p className="h4">EXPERIENCE</p>
                     </div>
                     <div className={"col-12"}>
-                        -
+                        <TimelineExperience/>
                     </div>
                 </div>
             </div>
