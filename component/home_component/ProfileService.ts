@@ -6,6 +6,12 @@ import ais from "@/public/image/ais.png";
 import {ProfileInfoM} from "@/app/modal/ProfileM";
 
 
+
+export function getLastUpdate(): string {
+    return "2024 June"
+}
+
+
 export function getLinkCV(): string {
     return "https://drive.google.com/file/d/1ID_sNAynq6y8GHXasc1mPi8l2F_jSEND/view?usp=drive_link";
 }
