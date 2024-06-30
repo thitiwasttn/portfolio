@@ -6,6 +6,16 @@ import ais from "@/public/image/ais.png";
 import {ProfileInfoM} from "@/app/modal/ProfileM";
 
 
+export function getListAreaOfExp(): string[] {
+    return [
+        "Backend developer",
+        "Web developer",
+        "Java developer",
+        "Windows server administration",
+        "Linux server administration"
+    ];
+}
+
 
 export function getLastUpdate(): string {
     return "2024 June"

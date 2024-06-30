@@ -2,15 +2,10 @@ import SkillComponent from "@/component/home_component/skill/SkillComponent";
 import TimelineExperience from "@/component/home_component/timeline_experience/TimelineExperience";
 import React from "react";
 import ig from "@/public/image/ig.png";
+import {getListAreaOfExp} from "@/component/home_component/ProfileService";
 
 export default function ContentComponent() {
-    const listAreaOfExp: string[] = [
-        "Backend developer",
-        "Web developer",
-        "Java developer",
-        "Windows server administration",
-        "Linux server administration"
-    ]
+    const listAreaOfExp: string[] = getListAreaOfExp();
     return <>
         <div className={"profileInfo shadow bg-body-tertiary rounded-4 overflow-auto"}>
             <div className={"container-fluid "}>
@@ -52,7 +47,8 @@ export default function ContentComponent() {
                         <p className="h4">EDUCATION</p>
                     </div>
                     <div className={"col-12"}>
-                        <div className="card rounded-4" style={{borderColor: "rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important"}}>
+                        <div className="card rounded-4"
+                             style={{borderColor: "rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important"}}>
                             <div className="card-header">
                                 {"Bachelor's degree"} GPA : 3.26
                             </div>
